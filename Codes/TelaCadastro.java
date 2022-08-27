@@ -3,15 +3,12 @@ package Codes;
 import javax.swing.JOptionPane;
 
 public class TelaCadastro extends javax.swing.JFrame {
-
-    String nome, email, senha, confirmaSenha, cep, complemento;
-
+ String nome,email,senha,confirmaSenha,cep,complemento;
+  
     public TelaCadastro() {
         initComponents();
-        //centralizar na tela
-        setLocationRelativeTo(null);
         //desmarcar o botão de maximizar
-        setResizable(false);
+        setResizable(false);  
     }
 
     @SuppressWarnings("unchecked")
@@ -36,6 +33,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         LabelEmail5 = new javax.swing.JLabel();
         TextComplemento = new javax.swing.JTextField();
         PainelNavBar1 = new javax.swing.JPanel();
+        BTwpp = new javax.swing.JButton();
+        BTInsta = new javax.swing.JButton();
         BTConjuntos = new javax.swing.JButton();
         BTSeleções = new javax.swing.JButton();
         BTTimes = new javax.swing.JButton();
@@ -46,11 +45,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        BTwpp = new javax.swing.JButton();
-        BTInsta = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        LabelInformações1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         TextSenha = new javax.swing.JPasswordField();
         TextSenhaConfirmacao = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
@@ -75,6 +70,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         });
 
         TextPesquisa.setBackground(new java.awt.Color(232, 232, 232));
+        TextPesquisa.setForeground(new java.awt.Color(0, 0, 0));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/carrinho.png"))); // NOI18N
 
@@ -119,49 +115,54 @@ public class TelaCadastro extends javax.swing.JFrame {
         );
 
         LabelEmail.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail.setText("Digite seu email:");
 
+        TextEmail.setBackground(new java.awt.Color(255, 255, 255));
         TextEmail.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        TextEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextEmailActionPerformed(evt);
-            }
-        });
+        TextEmail.setForeground(new java.awt.Color(0, 0, 0));
 
         LabelEmail1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail1.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail1.setText("Digite seu CEP:");
 
+        TextCEP.setBackground(new java.awt.Color(255, 255, 255));
         TextCEP.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        TextCEP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextCEPActionPerformed(evt);
-            }
-        });
+        TextCEP.setForeground(new java.awt.Color(0, 0, 0));
 
         LabelEmail2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail2.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail2.setText("Digite seu nome completo:");
 
+        TextNomeCompleto.setBackground(new java.awt.Color(255, 255, 255));
         TextNomeCompleto.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        TextNomeCompleto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextNomeCompletoActionPerformed(evt);
-            }
-        });
+        TextNomeCompleto.setForeground(new java.awt.Color(0, 0, 0));
 
         LabelEmail3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail3.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail3.setText("Digite sua Senha:");
 
         LabelEmail4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail4.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail4.setText("Confirme sua Senha:");
 
         LabelEmail5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        LabelEmail5.setForeground(new java.awt.Color(0, 0, 0));
         LabelEmail5.setText("Digite bloco/casa/Apartamento:");
 
+        TextComplemento.setBackground(new java.awt.Color(255, 255, 255));
         TextComplemento.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        TextComplemento.setForeground(new java.awt.Color(0, 0, 0));
         TextComplemento.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
         PainelNavBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
+        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
+
+        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
+        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
 
         BTConjuntos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTConjuntos.setText("Conjuntos");
@@ -208,19 +209,8 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setText("Suporte via WhatsApp:");
-
-        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
-        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
-
-        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
-        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
-
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-
-        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Suporte via WhatsApp");
 
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
@@ -236,29 +226,18 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BTConjuntos)
                             .addComponent(LabelCategoria)
                             .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(BTConjuntos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(349, 349, 349)
-                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(LabelInformações1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
+                                .addGap(19, 19, 19)
                                 .addComponent(BTInsta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(30, 30, 30)
                                 .addComponent(BTwpp))
-                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(jLabel2)))
-                        .addGap(59, 59, 59)))
-                .addGap(306, 306, 306)
+                            .addComponent(jLabel1))
+                        .addGap(94, 94, 94)))
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -273,12 +252,8 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(7, 7, 7)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTInsta)
                             .addComponent(BTwpp)))
@@ -294,7 +269,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTTermosDeerviço)
                             .addComponent(BTConjuntos))
-                        .addGap(12, 12, 12)
+                        .addGap(6, 6, 6)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTduvidas)
                             .addComponent(BTSeleções))
@@ -302,12 +277,16 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTRastrearPedido)
                             .addComponent(BTTimes))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
+        TextSenha.setBackground(new java.awt.Color(255, 255, 255));
         TextSenha.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        TextSenha.setForeground(new java.awt.Color(0, 0, 0));
 
+        TextSenhaConfirmacao.setBackground(new java.awt.Color(255, 255, 255));
         TextSenhaConfirmacao.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        TextSenhaConfirmacao.setForeground(new java.awt.Color(0, 0, 0));
 
         jButton1.setBackground(new java.awt.Color(255, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -323,66 +302,87 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LabelEmail1)
-                            .addComponent(LabelEmail)
-                            .addComponent(LabelEmail2)
-                            .addComponent(LabelEmail3)
-                            .addComponent(LabelEmail4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextCEP)
-                            .addComponent(TextSenhaConfirmacao)
-                            .addComponent(TextSenha)
-                            .addComponent(TextEmail)
-                            .addComponent(TextNomeCompleto)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(LabelEmail5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TextComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(129, 129, 129))
-            .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(LabelEmail2)
+                        .addGap(18, 18, 18)
+                        .addComponent(TextNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(LabelEmail1)
+                        .addGap(16, 16, 16)
+                        .addComponent(TextCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(LabelEmail5)
+                        .addGap(17, 17, 17)
+                        .addComponent(TextComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(79, 79, 79)
+                            .addComponent(LabelEmail4)
+                            .addGap(18, 18, 18)
+                            .addComponent(TextSenhaConfirmacao))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(103, 103, 103)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(LabelEmail3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(TextSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(LabelEmail)
+                                    .addGap(23, 23, 23)
+                                    .addComponent(TextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(jButton1)))
+                .addGap(150, 150, 150))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(PainelNavBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(114, 114, 114)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelEmail2))
+                .addGap(105, 105, 105)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(LabelEmail2))
+                    .addComponent(TextNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelEmail)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(LabelEmail))
                     .addComponent(TextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelEmail3)
                     .addComponent(TextSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelEmail4)
-                    .addComponent(TextSenhaConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextCEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelEmail1))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(LabelEmail4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(TextSenhaConfirmacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelEmail1)
+                    .addComponent(TextCEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelEmail5))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelEmail5)
+                    .addComponent(TextComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -390,13 +390,17 @@ public class TelaCadastro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1250, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(231, 231, 231)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(117, 117, 117)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(323, Short.MAX_VALUE))
         );
 
         pack();
@@ -423,63 +427,23 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        setaValoresDeCadastro();
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void TextCEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextCEPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextCEPActionPerformed
-
-    private void TextNomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNomeCompletoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextNomeCompletoActionPerformed
-
-    private void TextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextEmailActionPerformed
-    String validaEmail;
-    String validaSenha;
-    String emailCMP, senhaCMP;
-
-    public void setaValoresDeCadastro() {
+       
         nome = TextComplemento.getText();
         email = TextEmail.getText();
         senha = TextSenha.getText();
         confirmaSenha = TextSenhaConfirmacao.getText();
         cep = TextCEP.getText();
-        complemento = TextComplemento.getText();
-        ValidaCadastro();
-        ValidaLogin();
-    }
+        complemento = TextComplemento.getText();        
+        
+        if(!confirmaSenha.equals(senha)){
+          JOptionPane.showMessageDialog(null, "Campo Confirma senha Incorreto", "Erro", JOptionPane.WARNING_MESSAGE);
+          confirmaSenha = "";
+          TextSenhaConfirmacao.setText("");
+          senha = "";
+          TextSenha.setText("");
+        }// END IF Validação de senha       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    public void ValidaCadastro() {
-        if (!confirmaSenha.equals(senha)) {
-            JOptionPane.showMessageDialog(null, "Campo Confirma senha Incorreto.", "Erro", JOptionPane.WARNING_MESSAGE);
-            confirmaSenha = "";
-            senha = "";
-            TextSenhaConfirmacao.setText("");
-            TextSenha.setText("");
-        }// END IF Validação de senha   
-        else {
-            JOptionPane.showMessageDialog(null, "Cadastro feito com êxito!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        }
-    }
-
-    public void ValidaLogin() {
-        do {
-            validaEmail = JOptionPane.showInputDialog(null, "Digite seu email:");
-            validaSenha = JOptionPane.showInputDialog(null, "Digite sua senha:");
-        } while (!validaEmail.equals(email) || !validaSenha.equals(senha));
-        JOptionPane.showMessageDialog(
-                null, "Login feito com êxito!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        PI.setVisible(true);
-    }
-    PaginaInicial PI = new PaginaInicial();
-    
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -494,17 +458,13 @@ public class TelaCadastro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastro.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastro.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastro.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastro.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -537,7 +497,6 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel LabelEmail4;
     private javax.swing.JLabel LabelEmail5;
     private javax.swing.JLabel LabelInformações;
-    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JPanel PainelNavBar;
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JTextField TextCEP;
@@ -550,9 +509,8 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private void setMaximumSize(double d) {
