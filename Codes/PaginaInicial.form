@@ -23,12 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" pref="1249" max="-2" attributes="0"/>
+          <Component id="jPanel1" min="-2" pref="1250" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" pref="1049" max="-2" attributes="0"/>
+          <Component id="jPanel1" min="-2" pref="1050" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -57,7 +57,7 @@
                           <Component id="PainelProdutos" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Component id="PainelNavBar" max="32767" attributes="0"/>
               <Component id="PainelNavBar1" max="32767" attributes="0"/>
@@ -71,7 +71,7 @@
                   <Component id="jPanel2" min="-2" pref="354" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="PainelProdutos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
                   <Component id="PainelNavBar1" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -346,7 +346,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="R$: 249,90"/>
+                <Property name="text" type="java.lang.String" value="R$: 499,90"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagenCamiseta2">
@@ -372,7 +372,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="R$: 249,90"/>
+                <Property name="text" type="java.lang.String" value="R$: 499,90"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagenCamiseta3">
@@ -504,19 +504,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="BTTimes" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="BTInsta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="BTwpp" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="403" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="BTConjuntos1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="328" max="32767" attributes="0"/>
                                       <Component id="jTextField1" min="-2" pref="231" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -529,10 +521,17 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="BTTimes" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="423" max="-2" attributes="0"/>
+                                      <Component id="BTInsta" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="BTwpp" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="BTConjuntos" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="BTSeleções" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="372" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
