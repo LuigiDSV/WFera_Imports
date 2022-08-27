@@ -4,9 +4,14 @@ public class PaginaInicial extends javax.swing.JFrame {
 
     public PaginaInicial() {
         initComponents();
-        
-    }
+        //centralizar na tela
+        setLocationRelativeTo(null);
+        //desmarcar o botão de maximizar
+        setResizable(false);
 
+    }
+    int controleCamisa;
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -17,7 +22,7 @@ public class PaginaInicial extends javax.swing.JFrame {
         BtPesquisar = new javax.swing.JButton();
         TextPesquisa = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        botaoLogin = new javax.swing.JButton();
         PainelProdutos = new javax.swing.JPanel();
         ImagenCamiseta1 = new javax.swing.JLabel();
         DescCamiseta1 = new javax.swing.JLabel();
@@ -31,10 +36,10 @@ public class PaginaInicial extends javax.swing.JFrame {
         ImagenCamiseta4 = new javax.swing.JLabel();
         DescCamiseta4 = new javax.swing.JLabel();
         LabelPreçoCamiseta4 = new javax.swing.JLabel();
-        BtComprarAgoraCamiseta1 = new javax.swing.JButton();
         BtComprarAgoraCamiseta2 = new javax.swing.JButton();
         BtComprarAgoraCamiseta3 = new javax.swing.JButton();
         BtComprarAgoraCamiseta4 = new javax.swing.JButton();
+        BtComprarAgoraCamiseta1 = new javax.swing.JButton();
         PainelNavBar1 = new javax.swing.JPanel();
         BTwpp = new javax.swing.JButton();
         BTInsta = new javax.swing.JButton();
@@ -78,8 +83,13 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/carrinho.png"))); // NOI18N
 
-        jButton4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton4.setText("Login");
+        botaoLogin.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        botaoLogin.setText("Login");
+        botaoLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelNavBarLayout = new javax.swing.GroupLayout(PainelNavBar);
         PainelNavBar.setLayout(PainelNavBarLayout);
@@ -93,7 +103,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BtPesquisar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(botaoLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
                 .addGap(14, 14, 14))
@@ -107,7 +117,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addGroup(PainelNavBarLayout.createSequentialGroup()
                             .addComponent(TextPesquisa)
                             .addGap(2, 2, 2))
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botaoLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BtHamburguer, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(BtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -123,7 +133,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         LabelPreçoCamiseta1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LabelPreçoCamiseta1.setForeground(new java.awt.Color(255, 0, 0));
-        LabelPreçoCamiseta1.setText("R$: 249,90");
+        LabelPreçoCamiseta1.setText("R$: 499,90");
 
         ImagenCamiseta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta1.jpeg"))); // NOI18N
 
@@ -132,7 +142,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
         LabelPreçoCamiseta2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LabelPreçoCamiseta2.setForeground(new java.awt.Color(255, 0, 0));
-        LabelPreçoCamiseta2.setText("R$: 249,90");
+        LabelPreçoCamiseta2.setText("R$: 499,90");
 
         ImagenCamiseta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta4.jpeg"))); // NOI18N
 
@@ -151,11 +161,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         LabelPreçoCamiseta4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LabelPreçoCamiseta4.setForeground(new java.awt.Color(255, 0, 0));
         LabelPreçoCamiseta4.setText("R$: 249,90");
-
-        BtComprarAgoraCamiseta1.setBackground(new java.awt.Color(255, 51, 51));
-        BtComprarAgoraCamiseta1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BtComprarAgoraCamiseta1.setForeground(new java.awt.Color(255, 255, 255));
-        BtComprarAgoraCamiseta1.setText("Comprar Agora");
 
         BtComprarAgoraCamiseta2.setBackground(new java.awt.Color(255, 51, 51));
         BtComprarAgoraCamiseta2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -182,6 +187,16 @@ public class PaginaInicial extends javax.swing.JFrame {
             }
         });
 
+        BtComprarAgoraCamiseta1.setBackground(new java.awt.Color(255, 51, 51));
+        BtComprarAgoraCamiseta1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BtComprarAgoraCamiseta1.setForeground(new java.awt.Color(255, 255, 255));
+        BtComprarAgoraCamiseta1.setText("Comprar Agora");
+        BtComprarAgoraCamiseta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtComprarAgoraCamiseta1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelProdutosLayout = new javax.swing.GroupLayout(PainelProdutos);
         PainelProdutos.setLayout(PainelProdutosLayout);
         PainelProdutosLayout.setHorizontalGroup(
@@ -189,43 +204,44 @@ public class PaginaInicial extends javax.swing.JFrame {
             .addGroup(PainelProdutosLayout.createSequentialGroup()
                 .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelProdutosLayout.createSequentialGroup()
-                        .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(LabelPreçoCamiseta1))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(85, 85, 85)
-                                .addComponent(BtComprarAgoraCamiseta2))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(DescCamiseta1)))
-                        .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(DescCamiseta2))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(118, 118, 118)
-                                .addComponent(LabelPreçoCamiseta2))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(89, 89, 89)
-                                .addComponent(BtComprarAgoraCamiseta1)))
-                        .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(114, 114, 114)
-                                .addComponent(DescCamiseta3))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(156, 156, 156)
-                                .addComponent(LabelPreçoCamiseta3))
-                            .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                .addGap(133, 133, 133)
-                                .addComponent(BtComprarAgoraCamiseta4))))
-                    .addGroup(PainelProdutosLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(ImagenCamiseta1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ImagenCamiseta2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ImagenCamiseta3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ImagenCamiseta3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(BtComprarAgoraCamiseta3)
+                        .addGroup(PainelProdutosLayout.createSequentialGroup()
+                            .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                    .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                            .addGap(107, 107, 107)
+                                            .addComponent(LabelPreçoCamiseta1))
+                                        .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                            .addGap(25, 25, 25)
+                                            .addComponent(DescCamiseta1)))
+                                    .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                            .addGap(61, 61, 61)
+                                            .addComponent(DescCamiseta2))
+                                        .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                            .addGap(118, 118, 118)
+                                            .addComponent(LabelPreçoCamiseta2))))
+                                .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                    .addGap(87, 87, 87)
+                                    .addComponent(BtComprarAgoraCamiseta1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BtComprarAgoraCamiseta2)
+                                    .addGap(37, 37, 37)))
+                            .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                    .addGap(114, 114, 114)
+                                    .addComponent(DescCamiseta3))
+                                .addGroup(PainelProdutosLayout.createSequentialGroup()
+                                    .addGap(156, 156, 156)
+                                    .addComponent(LabelPreçoCamiseta3))))))
                 .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelProdutosLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -236,9 +252,9 @@ public class PaginaInicial extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelProdutosLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BtComprarAgoraCamiseta3)
+                                    .addComponent(BtComprarAgoraCamiseta4)
                                     .addComponent(DescCamiseta4))
-                                .addGap(87, 87, 87))))
+                                .addGap(81, 81, 81))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelProdutosLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(LabelPreçoCamiseta4)
@@ -264,8 +280,8 @@ public class PaginaInicial extends javax.swing.JFrame {
                                 .addComponent(DescCamiseta1)
                                 .addGap(18, 18, 18)
                                 .addComponent(LabelPreçoCamiseta1)
-                                .addGap(18, 18, 18)
-                                .addComponent(BtComprarAgoraCamiseta2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BtComprarAgoraCamiseta1))
                             .addGroup(PainelProdutosLayout.createSequentialGroup()
                                 .addComponent(DescCamiseta3)
                                 .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,19 +289,19 @@ public class PaginaInicial extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(LabelPreçoCamiseta3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(BtComprarAgoraCamiseta4)
-                                            .addComponent(BtComprarAgoraCamiseta3)))
+                                        .addComponent(BtComprarAgoraCamiseta3))
                                     .addGroup(PainelProdutosLayout.createSequentialGroup()
                                         .addGap(12, 12, 12)
-                                        .addComponent(LabelPreçoCamiseta4))))
+                                        .addComponent(LabelPreçoCamiseta4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(BtComprarAgoraCamiseta4))))
                             .addGroup(PainelProdutosLayout.createSequentialGroup()
                                 .addComponent(DescCamiseta2)
                                 .addGap(18, 18, 18)
                                 .addComponent(LabelPreçoCamiseta2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(BtComprarAgoraCamiseta1)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(BtComprarAgoraCamiseta2)))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
@@ -356,18 +372,11 @@ public class PaginaInicial extends javax.swing.JFrame {
             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(BTTimes)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BTInsta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTwpp)
-                        .addGap(403, 403, 403))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelNavBar1Layout.createSequentialGroup()
                                 .addComponent(BTConjuntos1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 328, Short.MAX_VALUE)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelNavBar1Layout.createSequentialGroup()
                                 .addComponent(LabelCategoria)
@@ -376,10 +385,16 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addGap(335, 335, 335))
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addComponent(BTTimes)
+                                .addGap(423, 423, 423)
+                                .addComponent(BTInsta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTwpp))
                             .addComponent(BTConjuntos)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                                 .addComponent(BTSeleções)
-                                .addGap(372, 372, 372)
+                                .addGap(379, 379, 379)
                                 .addComponent(jLabel2)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,6 +497,8 @@ public class PaginaInicial extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -491,8 +508,6 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -502,7 +517,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -510,11 +525,11 @@ public class PaginaInicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1249, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1250, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1049, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -525,7 +540,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_BtPesquisarActionPerformed
 
     private void BtComprarAgoraCamiseta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtComprarAgoraCamiseta2ActionPerformed
-        
+
     }//GEN-LAST:event_BtComprarAgoraCamiseta2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -551,7 +566,26 @@ public class PaginaInicial extends javax.swing.JFrame {
     private void BTConjuntos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntos1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
+    
+    private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
+        TelaCadastro TC = new TelaCadastro();
+        TC.setVisible(true);
+    }//GEN-LAST:event_botaoLoginActionPerformed
 
+    private void BtComprarAgoraCamiseta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtComprarAgoraCamiseta1ActionPerformed
+        controleCamisa=1;
+        TelaCarrinho TCRR = new TelaCarrinho();
+        TCRR.setVisible(true);
+       
+    }//GEN-LAST:event_BtComprarAgoraCamiseta1ActionPerformed
+    public int setarControleCamisa(){
+        controleCamisa=1;
+        TelaCarrinho TCRR = new TelaCarrinho();
+        TCRR.setVisible(true);
+      
+        return controleCamisa;
+        
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -620,8 +654,8 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JPanel PainelProdutos;
     private javax.swing.JTextField TextPesquisa;
+    private javax.swing.JButton botaoLogin;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
