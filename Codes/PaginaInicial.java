@@ -4,8 +4,7 @@ public class PaginaInicial extends javax.swing.JFrame {
 
     public PaginaInicial() {
         initComponents();
-        PaginaInicial frame = new PaginaInicial();
-    frame.setResizable(false);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -49,6 +48,9 @@ public class PaginaInicial extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
+        LabelInformações1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -73,7 +75,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         });
 
         TextPesquisa.setBackground(new java.awt.Color(232, 232, 232));
-        TextPesquisa.setForeground(new java.awt.Color(0, 0, 0));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/carrinho.png"))); // NOI18N
 
@@ -101,14 +102,15 @@ public class PaginaInicial extends javax.swing.JFrame {
             PainelNavBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelNavBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PainelNavBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(PainelNavBarLayout.createSequentialGroup()
-                        .addComponent(TextPesquisa)
-                        .addGap(2, 2, 2))
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtPesquisar, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtHamburguer, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(PainelNavBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelNavBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(PainelNavBarLayout.createSequentialGroup()
+                            .addComponent(TextPesquisa)
+                            .addGap(2, 2, 2))
+                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtHamburguer, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(BtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -117,7 +119,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         ImagenCamiseta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta2.jpeg"))); // NOI18N
 
         DescCamiseta1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DescCamiseta1.setForeground(new java.awt.Color(0, 0, 0));
         DescCamiseta1.setText("Conjunto Puma Inverno Vermelho");
 
         LabelPreçoCamiseta1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -127,7 +128,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         ImagenCamiseta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta1.jpeg"))); // NOI18N
 
         DescCamiseta2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DescCamiseta2.setForeground(new java.awt.Color(0, 0, 0));
         DescCamiseta2.setText("Conjunto Puma Inverno Azul");
 
         LabelPreçoCamiseta2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -137,7 +137,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         ImagenCamiseta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta4.jpeg"))); // NOI18N
 
         DescCamiseta3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DescCamiseta3.setForeground(new java.awt.Color(0, 0, 0));
         DescCamiseta3.setText("Camiseta Nike Spotify");
 
         LabelPreçoCamiseta3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -147,7 +146,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         ImagenCamiseta4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/camiseta8.jpeg"))); // NOI18N
 
         DescCamiseta4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DescCamiseta4.setForeground(new java.awt.Color(0, 0, 0));
         DescCamiseta4.setText("Camiseta Nike Olimpia");
 
         LabelPreçoCamiseta4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -234,14 +232,13 @@ public class PaginaInicial extends javax.swing.JFrame {
                         .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelProdutosLayout.createSequentialGroup()
                                 .addComponent(ImagenCamiseta4)
-                                .addContainerGap())
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelProdutosLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(PainelProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(BtComprarAgoraCamiseta3)
-                                    .addGroup(PainelProdutosLayout.createSequentialGroup()
-                                        .addComponent(DescCamiseta4)
-                                        .addGap(87, 87, 87))))))
+                                    .addComponent(DescCamiseta4))
+                                .addGap(87, 87, 87))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelProdutosLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(LabelPreçoCamiseta4)
@@ -344,6 +341,14 @@ public class PaginaInicial extends javax.swing.JFrame {
             }
         });
 
+        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Suporte via WhatsApp:");
+
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
         PainelNavBar1Layout.setHorizontalGroup(
@@ -352,20 +357,31 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelCategoria)
-                            .addComponent(BTConjuntos1))
+                        .addComponent(BTTimes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BTInsta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BTwpp)
-                        .addGap(44, 44, 44))
+                        .addGap(403, 403, 403))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createSequentialGroup()
+                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelNavBar1Layout.createSequentialGroup()
+                                .addComponent(BTConjuntos1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelNavBar1Layout.createSequentialGroup()
+                                .addComponent(LabelCategoria)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(335, 335, 335))
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTSeleções)
                             .addComponent(BTConjuntos)
-                            .addComponent(BTTimes))
-                        .addGap(12, 12, 12)))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addComponent(BTSeleções)
+                                .addGap(372, 372, 372)
+                                .addComponent(jLabel2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -378,30 +394,32 @@ public class PaginaInicial extends javax.swing.JFrame {
             PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LabelInformações)
-                            .addComponent(LabelCategoria))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BTQuemSomosNos)
-                            .addComponent(BTConjuntos1)))
-                    .addComponent(BTwpp)
-                    .addComponent(BTInsta))
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelInformações)
+                    .addComponent(LabelCategoria)
+                    .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BTQuemSomosNos)
+                    .addComponent(BTConjuntos1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTTermosDeerviço)
                     .addComponent(BTConjuntos))
-                .addGap(6, 6, 6)
+                .addGap(12, 12, 12)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTduvidas)
-                    .addComponent(BTSeleções))
+                    .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BTSeleções)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTRastrearPedido)
-                    .addComponent(BTTimes))
-                .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(BTTimes)
+                    .addComponent(BTInsta)
+                    .addComponent(BTwpp))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(238, 249, 250));
@@ -484,7 +502,7 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -492,13 +510,11 @@ public class PaginaInicial extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1225, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1249, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1049, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1049, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -595,6 +611,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel ImagenCamiseta4;
     private javax.swing.JLabel LabelCategoria;
     private javax.swing.JLabel LabelInformações;
+    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JLabel LabelPreçoCamiseta1;
     private javax.swing.JLabel LabelPreçoCamiseta2;
     private javax.swing.JLabel LabelPreçoCamiseta3;
@@ -608,7 +625,9 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
