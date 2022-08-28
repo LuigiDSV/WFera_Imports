@@ -145,11 +145,6 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
 
         BTduvidas.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTduvidas.setText("Duvídas");
-        BTduvidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTduvidasActionPerformed(evt);
-            }
-        });
 
         BTRastrearPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTRastrearPedido.setText("Rastrear Pedido");
@@ -314,11 +309,6 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
      TelaListaTimes TLT = new TelaListaTimes();
         TLT.setVisible(true);
     }//GEN-LAST:event_BTTimesActionPerformed
-
-    private void BTduvidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTduvidasActionPerformed
-        TelaDuvidas TD = new TelaDuvidas();
-       TD.setVisible(true);
-    }//GEN-LAST:event_BTduvidasActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

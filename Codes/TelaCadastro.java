@@ -3,12 +3,13 @@ package Codes;
 import javax.swing.JOptionPane;
 
 public class TelaCadastro extends javax.swing.JFrame {
- String nome,email,senha,confirmaSenha,cep,complemento;
-  
+
+    String nome, email, senha, confirmaSenha, cep, complemento;
+
     public TelaCadastro() {
         initComponents();
         //desmarcar o botão de maximizar
-        setResizable(false);  
+        setResizable(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -229,7 +230,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                             .addComponent(BTConjuntos)
                             .addComponent(LabelCategoria)
                             .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
@@ -304,10 +305,7 @@ public class TelaCadastro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(416, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
@@ -344,6 +342,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addGap(171, 171, 171)
                         .addComponent(jButton1)))
                 .addGap(150, 150, 150))
+            .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,7 +381,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                     .addComponent(TextComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -390,17 +389,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(339, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(323, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -427,21 +420,23 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        nome = TextComplemento.getText();
-        email = TextEmail.getText();
-        senha = TextSenha.getText();
-        confirmaSenha = TextSenhaConfirmacao.getText();
-        cep = TextCEP.getText();
-        complemento = TextComplemento.getText();        
-        
-        if(!confirmaSenha.equals(senha)){
-          JOptionPane.showMessageDialog(null, "Campo Confirma senha Incorreto", "Erro", JOptionPane.WARNING_MESSAGE);
-          confirmaSenha = "";
-          TextSenhaConfirmacao.setText("");
-          senha = "";
-          TextSenha.setText("");
-        }// END IF Validação de senha       
+        nome = (TextComplemento.getText());
+        email = (TextEmail.getText());
+        senha = (TextSenha.getText());
+        confirmaSenha = (TextSenhaConfirmacao.getText());
+        cep = (TextCEP.getText());
+        complemento = (TextComplemento.getText());
+
+        if (!confirmaSenha.equals(senha)) {
+            JOptionPane.showMessageDialog(null, "Campo Confirma senha Incorreto", "Erro", JOptionPane.WARNING_MESSAGE);
+            confirmaSenha = "";
+            senha=("");
+            TextSenhaConfirmacao.setText("");
+            TextSenha.setText("");
+        }// END IF Validação de senha 
+        else {
+            JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso!", "Êxito", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
