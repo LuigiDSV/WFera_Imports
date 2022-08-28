@@ -19,8 +19,6 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         PainelNavBar1 = new javax.swing.JPanel();
-        BTwpp = new javax.swing.JButton();
-        BTInsta = new javax.swing.JButton();
         BTConjuntos = new javax.swing.JButton();
         BTSeleções = new javax.swing.JButton();
         BTTimes = new javax.swing.JButton();
@@ -31,7 +29,11 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BTwpp = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        BTInsta = new javax.swing.JButton();
+        LabelInformações1 = new javax.swing.JLabel();
         TituloTermos1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -102,16 +104,10 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         );
 
         jPanel3.add(PainelNavBar3);
-        PainelNavBar3.setBounds(0, 0, 1025, 45);
+        PainelNavBar3.setBounds(0, 0, 1250, 45);
 
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
         PainelNavBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
-        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
-
-        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
-        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
 
         BTConjuntos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTConjuntos.setText("Conjuntos");
@@ -168,8 +164,19 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Suporte via WhatsApp");
+        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
+        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Suporte via WhatsApp:");
+
+        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
+        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
+
+        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
 
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
@@ -188,15 +195,24 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
                             .addComponent(BTConjuntos)
                             .addComponent(LabelCategoria)
                             .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(360, 360, 360)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
+                                .addGap(77, 77, 77)
                                 .addComponent(BTInsta)
-                                .addGap(30, 30, 30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(BTwpp))
-                            .addComponent(jLabel1))
-                        .addGap(94, 94, 94)))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel2)))
+                        .addGap(59, 59, 59)))
+                .addGap(295, 295, 295)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -211,8 +227,12 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(7, 7, 7)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTInsta)
                             .addComponent(BTwpp)))
@@ -236,17 +256,17 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTRastrearPedido)
                             .addComponent(BTTimes))))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         jPanel3.add(PainelNavBar1);
-        PainelNavBar1.setBounds(0, 790, 1025, 261);
+        PainelNavBar1.setBounds(0, 850, 1250, 200);
 
         TituloTermos1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         TituloTermos1.setForeground(new java.awt.Color(0, 0, 0));
         TituloTermos1.setText("Termos e serviços");
         jPanel3.add(TituloTermos1);
-        TituloTermos1.setBounds(315, 63, 283, 48);
+        TituloTermos1.setBounds(490, 70, 283, 48);
 
         jTextArea1.setBackground(new java.awt.Color(243, 243, 243));
         jTextArea1.setColumns(20);
@@ -258,22 +278,17 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel3.add(jScrollPane1);
-        jScrollPane1.setBounds(6, 155, 924, 602);
+        jScrollPane1.setBounds(170, 140, 924, 602);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 237, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159))
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -332,15 +347,17 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
     private javax.swing.JButton BtPesquisar2;
     private javax.swing.JLabel LabelCategoria;
     private javax.swing.JLabel LabelInformações;
+    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JPanel PainelNavBar3;
     private javax.swing.JTextField TextPesquisa2;
     private javax.swing.JLabel TituloTermos1;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

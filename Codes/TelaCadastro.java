@@ -3,9 +3,7 @@ package Codes;
 import javax.swing.JOptionPane;
 
 public class TelaCadastro extends javax.swing.JFrame {
-
     String nome, email, senha, confirmaSenha, cep, complemento;
-
     public TelaCadastro() {
         initComponents();
         //desmarcar o botão de maximizar
@@ -34,8 +32,6 @@ public class TelaCadastro extends javax.swing.JFrame {
         LabelEmail5 = new javax.swing.JLabel();
         TextComplemento = new javax.swing.JTextField();
         PainelNavBar1 = new javax.swing.JPanel();
-        BTwpp = new javax.swing.JButton();
-        BTInsta = new javax.swing.JButton();
         BTConjuntos = new javax.swing.JButton();
         BTSeleções = new javax.swing.JButton();
         BTTimes = new javax.swing.JButton();
@@ -46,7 +42,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BTInsta = new javax.swing.JButton();
+        LabelInformações1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        BTwpp = new javax.swing.JButton();
         TextSenha = new javax.swing.JPasswordField();
         TextSenhaConfirmacao = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
@@ -159,12 +159,6 @@ public class TelaCadastro extends javax.swing.JFrame {
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
         PainelNavBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
-        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
-
-        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
-        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
-
         BTConjuntos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTConjuntos.setText("Conjuntos");
         BTConjuntos.addActionListener(new java.awt.event.ActionListener() {
@@ -210,8 +204,19 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Suporte via WhatsApp");
+        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
+        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
+
+        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Suporte via WhatsApp:");
+
+        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
+        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
 
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
@@ -230,15 +235,24 @@ public class TelaCadastro extends javax.swing.JFrame {
                             .addComponent(BTConjuntos)
                             .addComponent(LabelCategoria)
                             .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(342, 342, 342)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
+                                .addGap(77, 77, 77)
                                 .addComponent(BTInsta)
-                                .addGap(30, 30, 30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(BTwpp))
-                            .addComponent(jLabel1))
-                        .addGap(94, 94, 94)))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel2)))
+                        .addGap(59, 59, 59)))
+                .addGap(313, 313, 313)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -253,8 +267,12 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(7, 7, 7)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTInsta)
                             .addComponent(BTwpp)))
@@ -278,7 +296,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTRastrearPedido)
                             .addComponent(BTTimes))))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         TextSenha.setBackground(new java.awt.Color(255, 255, 255));
@@ -305,7 +323,7 @@ public class TelaCadastro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(416, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
@@ -420,16 +438,16 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        nome = (TextComplemento.getText());
-        email = (TextEmail.getText());
-        senha = (TextSenha.getText());
-        confirmaSenha = (TextSenhaConfirmacao.getText());
-        cep = (TextCEP.getText());
-        complemento = (TextComplemento.getText());
+        nome=(TextComplemento.getText());
+        email=(TextEmail.getText());
+        senha=(TextSenha.getText());
+        confirmaSenha=(TextSenhaConfirmacao.getText());
+        cep=(TextCEP.getText());
+        complemento=(TextComplemento.getText());
 
         if (!confirmaSenha.equals(senha)) {
             JOptionPane.showMessageDialog(null, "Campo Confirma senha Incorreto", "Erro", JOptionPane.WARNING_MESSAGE);
-            confirmaSenha = "";
+            confirmaSenha=("");
             senha=("");
             TextSenhaConfirmacao.setText("");
             TextSenha.setText("");
@@ -492,6 +510,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel LabelEmail4;
     private javax.swing.JLabel LabelEmail5;
     private javax.swing.JLabel LabelInformações;
+    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JPanel PainelNavBar;
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JTextField TextCEP;
@@ -504,8 +523,9 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private void setMaximumSize(double d) {

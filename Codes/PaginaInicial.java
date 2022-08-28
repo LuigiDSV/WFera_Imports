@@ -36,8 +36,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         BtComprarAgoraCamiseta3 = new javax.swing.JButton();
         BtComprarAgoraCamiseta4 = new javax.swing.JButton();
         PainelNavBar1 = new javax.swing.JPanel();
-        BTwpp = new javax.swing.JButton();
-        BTInsta = new javax.swing.JButton();
         BTConjuntos = new javax.swing.JButton();
         BTSeleções = new javax.swing.JButton();
         BTTimes = new javax.swing.JButton();
@@ -48,6 +46,11 @@ public class PaginaInicial extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
+        BTwpp = new javax.swing.JButton();
+        LabelInformações1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        BTInsta = new javax.swing.JButton();
         PainelCarrosel = new javax.swing.JPanel();
         BTFlechaDireita = new javax.swing.JButton();
         ImagenCarrosel = new javax.swing.JLabel();
@@ -297,12 +300,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
         PainelNavBar1.setPreferredSize(new java.awt.Dimension(1250, 1050));
 
-        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
-        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
-
-        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
-        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
-
         BTConjuntos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTConjuntos.setText("Conjuntos");
         BTConjuntos.addActionListener(new java.awt.event.ActionListener() {
@@ -353,6 +350,20 @@ public class PaginaInicial extends javax.swing.JFrame {
             }
         });
 
+        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
+        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
+
+        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Suporte via WhatsApp:");
+
+        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
+        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
+
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
         PainelNavBar1Layout.setHorizontalGroup(
@@ -360,21 +371,30 @@ public class PaginaInicial extends javax.swing.JFrame {
             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(LabelCategoria)
+                        .addComponent(BTConjuntos1))
+                    .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(BTSeleções)
+                        .addComponent(BTConjuntos)
+                        .addComponent(BTTimes)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelCategoria)
-                            .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BTInsta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTwpp)
-                        .addGap(44, 44, 44))
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTSeleções)
-                            .addComponent(BTConjuntos)
-                            .addComponent(BTTimes))
-                        .addGap(12, 12, 12)))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(BTInsta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BTwpp))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel2)))
+                        .addGap(59, 59, 59)))
+                .addGap(304, 304, 304)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -389,28 +409,36 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BTInsta)
+                            .addComponent(BTwpp)))
+                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(LabelInformações)
                             .addComponent(LabelCategoria))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTQuemSomosNos)
-                            .addComponent(BTConjuntos1)))
-                    .addComponent(BTwpp)
-                    .addComponent(BTInsta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTTermosDeerviço)
-                    .addComponent(BTConjuntos))
-                .addGap(6, 6, 6)
-                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BTduvidas)
-                    .addComponent(BTSeleções))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BTRastrearPedido)
-                    .addComponent(BTTimes))
-                .addContainerGap(919, Short.MAX_VALUE))
+                            .addComponent(BTConjuntos1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(BTTermosDeerviço)
+                            .addComponent(BTConjuntos))
+                        .addGap(6, 6, 6)
+                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BTduvidas)
+                            .addComponent(BTSeleções))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BTRastrearPedido)
+                            .addComponent(BTTimes))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         PainelCarrosel.setBackground(new java.awt.Color(238, 249, 250));
@@ -474,16 +502,15 @@ public class PaginaInicial extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(PainelCarrosel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(64, 64, 64)
+                .addComponent(PainelCarrosel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(PainelNavBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 1225, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 22, Short.MAX_VALUE))
+            .addComponent(PainelNavBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,19 +520,19 @@ public class PaginaInicial extends javax.swing.JFrame {
                 .addComponent(PainelCarrosel, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(PainelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1225, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1049, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -614,6 +641,7 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel ImagenCarrosel;
     private javax.swing.JLabel LabelCategoria;
     private javax.swing.JLabel LabelInformações;
+    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JLabel LabelPreçoCamiseta1;
     private javax.swing.JLabel LabelPreçoCamiseta2;
     private javax.swing.JLabel LabelPreçoCamiseta3;
@@ -625,6 +653,8 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JTextField TextPesquisa;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
