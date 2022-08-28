@@ -1,9 +1,13 @@
 package Codes;
-public class TelaListaTimes extends javax.swing.JFrame {
 
-    public TelaListaTimes() {
+import javax.swing.JOptionPane;
+
+public class TelaDuvidas extends javax.swing.JFrame {
+
+    public TelaDuvidas() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -29,15 +33,9 @@ public class TelaListaTimes extends javax.swing.JFrame {
         BTConjuntos1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        TituloTermos1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -138,6 +136,11 @@ public class TelaListaTimes extends javax.swing.JFrame {
 
         BTQuemSomosNos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTQuemSomosNos.setText("Quem somos");
+        BTQuemSomosNos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTQuemSomosNosActionPerformed(evt);
+            }
+        });
 
         BTduvidas.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTduvidas.setText("Duvídas");
@@ -241,43 +244,20 @@ public class TelaListaTimes extends javax.swing.JFrame {
         );
 
         jPanel1.setBackground(new java.awt.Color(242, 242, 242));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
-        TituloTermos1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        TituloTermos1.setForeground(new java.awt.Color(0, 0, 0));
-        TituloTermos1.setText("Times:");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Brasileirão");
+        jLabel2.setText("Duvidas");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("La Liga (Campeonato Espanhol)");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Série A (Campeonato Italiano)");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Premier League (Campeonato Inglês)");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Bundesliga (Campeonato Alemão)");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Ligue 1 (Campeonato Francês)");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Seleções Mundiais");
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("OBS: Times dessas Respectivas Ligas");
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(242, 242, 242));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setRows(5);
+        jTextArea1.setText(" Dúvidas\n    Atendimento\n Para oferecer o melhor atendimento, nós temos uma equipe preparada para dar suporte, preparada para resolver todos seus problemas. Buscamos a melhor resoluções para seus problemas.\n\n\n     Qualidade\n Nossos produtos seguem o nosso padrão de beleza estética e, qualidade. Como vendemos produtos endereçados a clientes incríveis, nossos produtos seguem os mesmos padrões.\n\n\n      Variedade\n  Para que nossos clientes tenham sempre uma ótima e diferente experiência, nós buscamos ter uma variedade de produtos preparados para nossos consumidores.\n\n\n     Garantia\n   Todos os produtos disponíveis tem garantia, desde o momento de compra até a entrega, não importando os dias encomendados, proporcionando uma experiência vívida do nosso comprometimento com o nosso cliente, confia.\n\n\n     Promoções\n  Os nossos clientes cadastrados recebem notificações de promoções e descontos fornecidos pela WFera.\n\n\n     Informações de envio\n  Nós entregamos por todo o Brasil de forma rápida e segura, utilizamos nosso serviços de entregas e empresas de entregas parceiras, para garantir a chegada do produto.\n\n  Como é entregue o produto\n  O produto começa a ser direcionado ao local, no momento da compra, é feito a embalagem do produto e todos os processos de segurança. Logo após, é direcionado a equipe de rastreamento, visto o local, é endereçado ao carro/caminhão. E, é entregue o nosso produto ao cliente.\n");
+        jTextArea1.setBorder(null);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -286,43 +266,21 @@ public class TelaListaTimes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(722, 722, 722)
-                        .addComponent(TituloTermos1))
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1037, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(608, 608, 608)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))))
-                .addContainerGap(771, Short.MAX_VALUE))
+                        .addGap(478, 478, 478)
+                        .addComponent(jLabel2)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(TituloTermos1)
-                .addGap(92, 92, 92)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addContainerGap(315, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -330,12 +288,11 @@ public class TelaListaTimes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PainelNavBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PainelNavBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1025, Short.MAX_VALUE)
+                    .addComponent(PainelNavBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PainelNavBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 360, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,7 +303,7 @@ public class TelaListaTimes extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PainelNavBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -357,7 +314,7 @@ public class TelaListaTimes extends javax.swing.JFrame {
     }//GEN-LAST:event_BtPesquisar2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-      
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void BTConjuntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntosActionPerformed
@@ -368,6 +325,11 @@ public class TelaListaTimes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BTSeleçõesActionPerformed
 
+    private void BTTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTimesActionPerformed
+        TelaListaTimes TLT = new TelaListaTimes();
+        TLT.setVisible(true);
+    }//GEN-LAST:event_BTTimesActionPerformed
+
     private void BTTermosDeerviçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTermosDeerviçoActionPerformed
         TelaTermoseServicos TTS = new TelaTermoseServicos();
         TTS.setVisible(true);
@@ -377,15 +339,14 @@ public class TelaListaTimes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
-    private void BTTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTimesActionPerformed
-        TelaListaTimes TLT = new TelaListaTimes();
-        TLT.setVisible(true);
-    }//GEN-LAST:event_BTTimesActionPerformed
-
     private void BTduvidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTduvidasActionPerformed
-      TelaDuvidas TD = new TelaDuvidas();
+       TelaDuvidas TD = new TelaDuvidas();
        TD.setVisible(true);
     }//GEN-LAST:event_BTduvidasActionPerformed
+
+    private void BTQuemSomosNosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTQuemSomosNosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTQuemSomosNosActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -396,24 +357,20 @@ public class TelaListaTimes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaListaTimes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDuvidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaListaTimes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDuvidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaListaTimes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDuvidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaListaTimes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDuvidas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaListaTimes().setVisible(true);
+                new TelaDuvidas().setVisible(true);
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTConjuntos;
     private javax.swing.JButton BTConjuntos1;
@@ -432,18 +389,12 @@ public class TelaListaTimes extends javax.swing.JFrame {
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JPanel PainelNavBar3;
     private javax.swing.JTextField TextPesquisa2;
-    private javax.swing.JLabel TituloTermos1;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
