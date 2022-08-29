@@ -15,8 +15,6 @@ public class TelaListaTimes extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         PainelNavBar1 = new javax.swing.JPanel();
-        BTwpp = new javax.swing.JButton();
-        BTInsta = new javax.swing.JButton();
         BTConjuntos = new javax.swing.JButton();
         BTSeleções = new javax.swing.JButton();
         BTTimes = new javax.swing.JButton();
@@ -27,7 +25,12 @@ public class TelaListaTimes extends javax.swing.JFrame {
         BTTermosDeerviço = new javax.swing.JButton();
         LabelInformações = new javax.swing.JLabel();
         BTConjuntos1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LabelInformações1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        BTInsta1 = new javax.swing.JButton();
+        BTwpp1 = new javax.swing.JButton();
+        BTPaginaInicial = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         TituloTermos1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -46,6 +49,11 @@ public class TelaListaTimes extends javax.swing.JFrame {
 
         BtHamburguer2.setBackground(new java.awt.Color(115, 115, 115));
         BtHamburguer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menuHam.png"))); // NOI18N
+        BtHamburguer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtHamburguer2ActionPerformed(evt);
+            }
+        });
 
         BtPesquisar2.setBackground(new java.awt.Color(115, 115, 115));
         BtPesquisar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupinha.png"))); // NOI18N
@@ -103,12 +111,6 @@ public class TelaListaTimes extends javax.swing.JFrame {
         PainelNavBar1.setBackground(new java.awt.Color(115, 115, 115));
         PainelNavBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        BTwpp.setBackground(new java.awt.Color(115, 115, 115));
-        BTwpp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
-
-        BTInsta.setBackground(new java.awt.Color(115, 115, 115));
-        BTInsta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
-
         BTConjuntos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTConjuntos.setText("Conjuntos");
         BTConjuntos.addActionListener(new java.awt.event.ActionListener() {
@@ -138,9 +140,19 @@ public class TelaListaTimes extends javax.swing.JFrame {
 
         BTQuemSomosNos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTQuemSomosNos.setText("Quem somos");
+        BTQuemSomosNos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTQuemSomosNosActionPerformed(evt);
+            }
+        });
 
         BTduvidas.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTduvidas.setText("Duvídas");
+        BTduvidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTduvidasActionPerformed(evt);
+            }
+        });
 
         BTRastrearPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTRastrearPedido.setText("Rastrear Pedido");
@@ -164,8 +176,27 @@ public class TelaListaTimes extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Suporte via WhatsApp");
+        LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setText("Suporte via WhatsApp:");
+
+        BTInsta1.setBackground(new java.awt.Color(115, 115, 115));
+        BTInsta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.png"))); // NOI18N
+
+        BTwpp1.setBackground(new java.awt.Color(115, 115, 115));
+        BTwpp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/wsp.png"))); // NOI18N
+
+        BTPaginaInicial.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        BTPaginaInicial.setText("Pagina inicial");
+        BTPaginaInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTPaginaInicialActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
@@ -184,15 +215,26 @@ public class TelaListaTimes extends javax.swing.JFrame {
                             .addComponent(BTConjuntos)
                             .addComponent(LabelCategoria)
                             .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addComponent(BTPaginaInicial)
+                .addGap(432, 432, 432)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(BTInsta)
-                                .addGap(30, 30, 30)
-                                .addComponent(BTwpp))
-                            .addComponent(jLabel1))
-                        .addGap(94, 94, 94)))
+                                .addGap(77, 77, 77)
+                                .addComponent(BTInsta1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BTwpp1))
+                            .addGroup(PainelNavBar1Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel10)))
+                        .addGap(59, 59, 59)))
+                .addGap(559, 559, 559)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BTQuemSomosNos)
                     .addComponent(LabelInformações)
@@ -205,21 +247,26 @@ public class TelaListaTimes extends javax.swing.JFrame {
             PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
+                .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelInformações)
+                    .addComponent(LabelCategoria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(7, 7, 7)
+                        .addComponent(LabelInformações1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTInsta)
-                            .addComponent(BTwpp)))
+                            .addComponent(BTInsta1)
+                            .addComponent(BTwpp1)))
                     .addGroup(PainelNavBar1Layout.createSequentialGroup()
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LabelInformações)
-                            .addComponent(LabelCategoria))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTQuemSomosNos)
-                            .addComponent(BTConjuntos1))
+                            .addComponent(BTConjuntos1)
+                            .addComponent(BTPaginaInicial))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTTermosDeerviço)
@@ -232,7 +279,7 @@ public class TelaListaTimes extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTRastrearPedido)
                             .addComponent(BTTimes))))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(242, 242, 242));
@@ -294,7 +341,7 @@ public class TelaListaTimes extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9))))
-                .addContainerGap(771, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,11 +403,13 @@ public class TelaListaTimes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void BTConjuntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntosActionPerformed
-        // TODO add your handling code here:
+        TelaConjuntos TCN = new TelaConjuntos();
+       TCN.setVisible(true);
     }//GEN-LAST:event_BTConjuntosActionPerformed
 
     private void BTSeleçõesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSeleçõesActionPerformed
-        // TODO add your handling code here:
+         TelaSelecoes TSC = new TelaSelecoes();
+        TSC.setVisible(true);
     }//GEN-LAST:event_BTSeleçõesActionPerformed
 
     private void BTTermosDeerviçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTermosDeerviçoActionPerformed
@@ -369,13 +418,34 @@ public class TelaListaTimes extends javax.swing.JFrame {
     }//GEN-LAST:event_BTTermosDeerviçoActionPerformed
 
     private void BTConjuntos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntos1ActionPerformed
-        // TODO add your handling code here:
+        TelaCamisetas TC = new TelaCamisetas();
+        TC.setVisible(true);
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
     private void BTTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTimesActionPerformed
         TelaListaTimes TLT = new TelaListaTimes();
         TLT.setVisible(true);
     }//GEN-LAST:event_BTTimesActionPerformed
+
+    private void BTduvidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTduvidasActionPerformed
+        TelaDuvidas TD = new TelaDuvidas();
+        TD.setVisible(true);
+    }//GEN-LAST:event_BTduvidasActionPerformed
+
+    private void BTQuemSomosNosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTQuemSomosNosActionPerformed
+       TelaQuemSomosNos TQSN = new TelaQuemSomosNos();
+        TQSN.setVisible(true);
+    }//GEN-LAST:event_BTQuemSomosNosActionPerformed
+
+    private void BTPaginaInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTPaginaInicialActionPerformed
+        PaginaInicial PGI = new PaginaInicial();
+        PGI.setVisible(true);
+    }//GEN-LAST:event_BTPaginaInicialActionPerformed
+
+    private void BtHamburguer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtHamburguer2ActionPerformed
+        TelaMenuHamburguer TMH = new TelaMenuHamburguer ();
+       TMH.setVisible(true);
+    }//GEN-LAST:event_BtHamburguer2ActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -407,25 +477,27 @@ public class TelaListaTimes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTConjuntos;
     private javax.swing.JButton BTConjuntos1;
-    private javax.swing.JButton BTInsta;
+    private javax.swing.JButton BTInsta1;
+    private javax.swing.JButton BTPaginaInicial;
     private javax.swing.JButton BTQuemSomosNos;
     private javax.swing.JButton BTRastrearPedido;
     private javax.swing.JButton BTSeleções;
     private javax.swing.JButton BTTermosDeerviço;
     private javax.swing.JButton BTTimes;
     private javax.swing.JButton BTduvidas;
-    private javax.swing.JButton BTwpp;
+    private javax.swing.JButton BTwpp1;
     private javax.swing.JButton BtHamburguer2;
     private javax.swing.JButton BtPesquisar2;
     private javax.swing.JLabel LabelCategoria;
     private javax.swing.JLabel LabelInformações;
+    private javax.swing.JLabel LabelInformações1;
     private javax.swing.JPanel PainelNavBar1;
     private javax.swing.JPanel PainelNavBar3;
     private javax.swing.JTextField TextPesquisa2;
     private javax.swing.JLabel TituloTermos1;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -435,5 +507,6 @@ public class TelaListaTimes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

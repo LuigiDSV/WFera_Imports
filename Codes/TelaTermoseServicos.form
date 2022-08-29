@@ -111,6 +111,9 @@
                   <Image iconType="3" name="/Images/menuHam.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtHamburguer2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BtPesquisar2">
               <Properties>
@@ -178,23 +181,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BTSeleções" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BTTimes" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BTConjuntos" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LabelCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BTConjuntos1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="166" max="32767" attributes="0"/>
+                          <Component id="BTSeleções" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTTimes" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="BTConjuntos" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="BTConjuntos1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="360" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="BTPaginaInicial" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="1" attributes="0">
                               <Component id="jTextField1" alignment="0" min="-2" pref="231" max="-2" attributes="0"/>
@@ -254,6 +251,7 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="BTQuemSomosNos" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="BTConjuntos1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BTPaginaInicial" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -272,7 +270,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -326,6 +324,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Quem somos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTQuemSomosNosActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BTduvidas">
               <Properties>
@@ -334,6 +335,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Duv&#xed;das"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTduvidasActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BTRastrearPedido">
               <Properties>
@@ -416,6 +420,17 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;Fique por dentro das promo&#xe7;&#xf5;es&lt;br&gt;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp cadastre seu email:"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="BTPaginaInicial">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pagina inicial"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTPaginaInicialActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="TituloTermos1">
@@ -448,6 +463,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="jTextArea1">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f3" green="f3" red="f3" type="rgb"/>
                 </Property>

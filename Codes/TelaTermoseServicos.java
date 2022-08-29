@@ -34,6 +34,7 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         BTInsta = new javax.swing.JButton();
         LabelInformações1 = new javax.swing.JLabel();
+        BTPaginaInicial = new javax.swing.JButton();
         TituloTermos1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -49,6 +50,11 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
 
         BtHamburguer2.setBackground(new java.awt.Color(115, 115, 115));
         BtHamburguer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menuHam.png"))); // NOI18N
+        BtHamburguer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtHamburguer2ActionPerformed(evt);
+            }
+        });
 
         BtPesquisar2.setBackground(new java.awt.Color(115, 115, 115));
         BtPesquisar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupinha.png"))); // NOI18N
@@ -138,9 +144,19 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
 
         BTQuemSomosNos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTQuemSomosNos.setText("Quem somos");
+        BTQuemSomosNos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTQuemSomosNosActionPerformed(evt);
+            }
+        });
 
         BTduvidas.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTduvidas.setText("Duvídas");
+        BTduvidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTduvidasActionPerformed(evt);
+            }
+        });
 
         BTRastrearPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         BTRastrearPedido.setText("Rastrear Pedido");
@@ -178,6 +194,14 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         LabelInformações1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         LabelInformações1.setText("<html>Fique por dentro das promoções<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp cadastre seu email:");
 
+        BTPaginaInicial.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        BTPaginaInicial.setText("Pagina inicial");
+        BTPaginaInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTPaginaInicialActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelNavBar1Layout = new javax.swing.GroupLayout(PainelNavBar1);
         PainelNavBar1.setLayout(PainelNavBar1Layout);
         PainelNavBar1Layout.setHorizontalGroup(
@@ -185,18 +209,15 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
             .addGroup(PainelNavBar1Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelNavBar1Layout.createSequentialGroup()
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTSeleções)
-                            .addComponent(BTTimes))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createSequentialGroup()
-                        .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTConjuntos)
-                            .addComponent(LabelCategoria)
-                            .addComponent(BTConjuntos1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(360, 360, 360)
+                    .addComponent(BTSeleções)
+                    .addComponent(BTTimes)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(BTConjuntos)
+                        .addComponent(LabelCategoria)
+                        .addComponent(BTConjuntos1)))
+                .addGap(31, 31, 31)
+                .addComponent(BTPaginaInicial)
+                .addGap(224, 224, 224)
                 .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -243,7 +264,8 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTQuemSomosNos)
-                            .addComponent(BTConjuntos1))
+                            .addComponent(BTConjuntos1)
+                            .addComponent(BTPaginaInicial))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BTTermosDeerviço)
@@ -256,7 +278,7 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
                         .addGroup(PainelNavBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BTRastrearPedido)
                             .addComponent(BTTimes))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jPanel3.add(PainelNavBar1);
@@ -268,6 +290,7 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         jPanel3.add(TituloTermos1);
         TituloTermos1.setBounds(490, 70, 283, 48);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(243, 243, 243));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -303,15 +326,18 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void BTConjuntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntosActionPerformed
-        // TODO add your handling code here:
+         TelaConjuntos TCN = new TelaConjuntos();
+       TCN.setVisible(true);
     }//GEN-LAST:event_BTConjuntosActionPerformed
 
     private void BTSeleçõesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSeleçõesActionPerformed
-        // TODO add your handling code here:
+         TelaSelecoes TSC = new TelaSelecoes();
+        TSC.setVisible(true);
     }//GEN-LAST:event_BTSeleçõesActionPerformed
 
     private void BTConjuntos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTConjuntos1ActionPerformed
-        // TODO add your handling code here:
+         TelaCamisetas TC = new TelaCamisetas();
+        TC.setVisible(true);
     }//GEN-LAST:event_BTConjuntos1ActionPerformed
 
     private void BTTermosDeerviçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTTermosDeerviçoActionPerformed
@@ -325,6 +351,26 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
         TLT.setVisible(true);
     }//GEN-LAST:event_BTTimesActionPerformed
 
+    private void BTduvidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTduvidasActionPerformed
+        TelaDuvidas TD = new TelaDuvidas();
+        TD.setVisible(true);
+    }//GEN-LAST:event_BTduvidasActionPerformed
+
+    private void BTQuemSomosNosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTQuemSomosNosActionPerformed
+        TelaQuemSomosNos TQSN = new TelaQuemSomosNos();
+        TQSN.setVisible(true);
+    }//GEN-LAST:event_BTQuemSomosNosActionPerformed
+
+    private void BTPaginaInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTPaginaInicialActionPerformed
+        PaginaInicial PGI = new PaginaInicial();
+        PGI.setVisible(true);
+    }//GEN-LAST:event_BTPaginaInicialActionPerformed
+
+    private void BtHamburguer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtHamburguer2ActionPerformed
+          TelaMenuHamburguer TMH = new TelaMenuHamburguer ();
+       TMH.setVisible(true);
+    }//GEN-LAST:event_BtHamburguer2ActionPerformed
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -336,6 +382,7 @@ public class TelaTermoseServicos extends javax.swing.JFrame {
     private javax.swing.JButton BTConjuntos;
     private javax.swing.JButton BTConjuntos1;
     private javax.swing.JButton BTInsta;
+    private javax.swing.JButton BTPaginaInicial;
     private javax.swing.JButton BTQuemSomosNos;
     private javax.swing.JButton BTRastrearPedido;
     private javax.swing.JButton BTSeleções;
